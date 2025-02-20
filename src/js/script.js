@@ -14,8 +14,10 @@ function showMessage() {
 
 let noButton = document.getElementById("noButton");
 
-noButton.addEventListener("mouseover", function() {
+noButton.addEventListener("mouseover", moveNoButton); 
+noButton.addEventListener("touchstart", moveNoButton); 
+function moveNoButton() {
     let moveX = (Math.random() - 0.5) * 400;
     let moveY = (Math.random() - 0.5) * 200;
     noButton.style.transform = `translate(${moveX}px, ${moveY}px)`;
-});
+}
